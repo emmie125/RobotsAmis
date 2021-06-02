@@ -1,6 +1,6 @@
 const Card = (props) => {
   return (
-    <div className="card" onClick={props.clickCard}>
+    <div className="card" >
       <div>
         <img src={props.url} alt={props.alt} />
       </div>
@@ -8,13 +8,16 @@ const Card = (props) => {
         <h2>{props.name}</h2>
         <p>{props.email}</p>
       </div>
+      <button className="btnDetails" onClick={props.clickCard}>Details</button>
     </div>
   );
 };
 
 export const ClickCard = (props) => {
+  
   return (
-    <div className="card-click" onClick={props.showCards}>
+    <div className="card-click" >
+      <button className="btnshowCards" onClick={props.showCards}>Back</button>
       <div className="card-click__img">
         <img src={props.url} alt={props.alt} />
       </div>
@@ -42,6 +45,7 @@ export const ClickCard = (props) => {
             <span>{props.bs}</span>
         </p>
       </div>
+    
     </div>
   );
 };
