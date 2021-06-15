@@ -10,6 +10,7 @@ body{
    overflow-x: hidden;
    background-image: linear-gradient(to right, #007D7D,#0C195A);
    background-position: cover;
+   padding-top: 5%;
    width:100vw;
    
    
@@ -23,6 +24,7 @@ body{
 
     &__title{
         justify-content: center;
+        margin-bottom: 3%;
         h1{
             font-family:"SEGA LOGO";
             color:#7df6cf;
@@ -66,8 +68,7 @@ body{
     padding: 1%;
   
     &::placeholder{
-        font-size: 1
-        8px;
+        font-size: 18px;
     }
 }
 .card{
@@ -85,8 +86,6 @@ body{
 
     &:hover{
         transform:scale(1.05);
-        border: 1px solid rgb(212, 212, 92);
-        background-color: rgb(212, 212, 92);
         transition: all 0.5s linear;
         
     }
@@ -118,7 +117,7 @@ body{
 
     width: 80%;
     display: flex;
-    background-color: rgb(204, 204, 24);
+    background-color: #7df6cf;;
     justify-content:center;
     align-items: center;
     margin:3% 10%;
