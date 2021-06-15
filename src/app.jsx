@@ -11,7 +11,7 @@ const App = () => {
   const [etatCard, setEtatCard] = useState(false);
 
   useEffect(() => {
-    fetch("http://jsonplaceholder.typicode.com/users")
+    fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
       .then((data) => {
         setIsLoading(false);
@@ -23,21 +23,19 @@ const App = () => {
        
       });
   }, []);
-  console.log(robots);
+  console.log("robots",robots);
 
   const Change = (e) => {
     e.preventDefault();
-    const filtreRobots = robots.filter(({ name }) =>
+    const filteredRobots = robots.filter(({ name }) =>
       name.toUpperCase().includes(e.currentTarget.value.toUpperCase())
     );
-
-    console.log(filtreRobots);
-    setSearch(filtreRobots);
+    console.log(filteredRobots);
+    setSearch(filteredRobots);
   };
 
   const handelClickCard = (id) => {
     const findRobot = robots.find((robots) => robots.id === id);
-    console.log(findRobot);
     setFindrobot(findRobot);
     setEtatCard(true);
   };
